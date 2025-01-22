@@ -1,7 +1,14 @@
 //new function named getComputerChoice that returns "rock", "paper" or "scissors"
 function getComputerChoice(rock, paper, scissors) {
     const randomNumber = Math.floor(Math.random() * 3)
-    
+    switch (randomNumber) {
+        case 0:
+            return "rock";
+        case 1:
+            return "paper";
+        case 2:
+            return "scissors";
+    }
 }
 //new function named getHumanChoice that returns one of the 3 choices from above
 function getHumanChoice(rock, paper, scissors) {}
