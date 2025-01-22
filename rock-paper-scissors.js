@@ -1,7 +1,7 @@
 //new function named getComputerChoice that returns "rock", "paper" or "scissors"
-function getComputerChoice() {"rock", "paper", "scissors"}
+function getComputerChoice("rock", "paper", "scissors") {}
 //new function named getHumanChoice that returns one of the 3 choices from above
-
+function getHumanChoice("rock", "paper", "scissors")
 //test the function output with console.log
 
 //new function named humanScore
