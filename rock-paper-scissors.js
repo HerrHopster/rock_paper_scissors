@@ -27,8 +27,7 @@ function humanScore() {}
 //new function named computerScore
 function computerScore() {}
 //initialize humanScore and computerScore with 0
-humanScore === 0
-computerScore === 0
+
 //new function named playRound
 function playRound() {}
 //define humanChoice and computerChoice for playRound
