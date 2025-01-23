@@ -15,7 +15,7 @@ function getHumanChoice() {
     //Lets the user input one of 3 choices
     let choice = prompt("Please enter rock, paper or scissors:").toLowerCase();
 
-    //checking of the user choice is valid
+    //checking if the user choice is valid
     while (choice !=="rock" && choice !=="paper" && choice !== "scissors") {
         choice = prompt("Your choice is invalid!")
     }
@@ -60,6 +60,9 @@ function computerScoreKeeper() {
         }
     }
 }
+
+const humanScore = humanScoreKeeper();
+const computerScore = computerScoreKeeper();
 
 //new function named playRound
 function playRound() {}
