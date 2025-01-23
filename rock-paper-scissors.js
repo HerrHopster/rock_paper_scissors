@@ -23,10 +23,43 @@ function getHumanChoice() {
 }
 
 //new function named humanScore
-function humanScore() {}
+function humanScoreKeeper() {
+    let score = 0;
+
+    return {
+        //get current score
+        getScore() {
+            return score;
+        },
+        //increase score
+        addPoint: function() {
+            score++;
+        },
+        //reset score
+        reset: function() {
+            score = 0;
+        }
+    }
+}
 //new function named computerScore
-function computerScore() {}
-//initialize humanScore and computerScore with 0
+function computerScoreKeeper() {
+    let score = 0;
+
+    return {
+        //get current score
+        getScore() {
+            return score;
+        },
+        //increase score
+        addPoint: function() {
+            score++;
+        },
+        //reset score
+        reset: function() {
+            score = 0;
+        }
+    }
+}
 
 //new function named playRound
 function playRound() {}
