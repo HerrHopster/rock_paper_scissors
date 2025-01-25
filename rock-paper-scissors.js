@@ -65,9 +65,31 @@ const humanScore = humanScoreKeeper();
 const computerScore = computerScoreKeeper();
 
 //new function named playRound
-function playRound() {}
-//define humanChoice and computerChoice for playRound
+function playRound(humanChoice, computerChoice) {
+    // First, normalize the human choice to lowercase to make it case-insensitive
+    humanChoice = humanChoice.toLowerCase();
 
+    // Check all possible winning scenarios
+    if (humanChoice === computerChoice) {
+        // If choices are the same, it's a tie
+        console.log(`It's a tie! Both chose ${humanChoice}`);
+        return "tie";
+    } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        // Human wins scenarios
+        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        humanScore.addPoint(); // Increment human score
+        return "human";
+    } else {
+        // Computer wins in all other cases
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        computerScore.addPoint(); // Increment computer score
+        return "computer";
+    }
+}
 //Use the 2 parameters as arguments
 
 //make humanCHoice case sensitive
