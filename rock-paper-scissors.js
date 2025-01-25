@@ -71,7 +71,6 @@ function playRound(humanChoice, computerChoice) {
 
     // Check all possible winning scenarios
     if (humanChoice === computerChoice) {
-        // If choices are the same, it's a tie
         console.log(`It's a tie! Both chose ${humanChoice}`);
         return "tie";
     } else if (
@@ -90,10 +89,3 @@ function playRound(humanChoice, computerChoice) {
         return "computer";
     }
 }
-//Use the 2 parameters as arguments
-
-//make humanCHoice case sensitive
-
-//console.log e.g “You lose! Paper beats Rock” for playRound
-
-//increment humanScore of computerScore based on the round winner
