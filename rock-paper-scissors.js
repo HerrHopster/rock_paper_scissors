@@ -89,3 +89,35 @@ function playRound(humanChoice, computerChoice) {
         return "computer";
     }
 }
+
+//Function that executes the game
+function playGame() {
+    // Reset scores at the start of the game
+    const humanScore = humanScoreKeeper();
+    const computerScore = computerScoreKeeper();
+
+    // Play 5 rounds
+    for (let round = 1; round <= 5; round++) {
+        // Log which round we're on
+        console.log(`--- Round ${round} ---`);
+
+        // Get choices for this round
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+
+        // Play the round
+        playRound(humanChoice, computerChoice);
+
+        // Show current scores after each round
+        console.log(`Current Scores - You: ${humanScore.getScore()} Computer: ${computerScore.getScore()}`);
+    }
+
+    // Determine and announce the final winner
+    if (humanScore.getScore() > computerScore.getScore()) {
+        console.log("🎉 Congratulations! You won the game! 🎉");
+    } else if (humanScore.getScore() < computerScore.getScore()) {
+        console.log("😢 Computer wins the game. Better luck next time! 😢");
+    } else {
+        console.log("🤝 It's a tie game! 🤝");
+    }
+}
